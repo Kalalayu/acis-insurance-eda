@@ -1,34 +1,23 @@
-# acis-insurance-eda
-End-to-end insurance risk analytics &amp; predictive modeling for AlphaCare
-Task 3 – A/B Hypothesis Testing: Insurance Risk Drivers
-Overview
+Task 4: Predictive Modeling & Risk-Based Premiums
 
-This task focuses on statistically validating or rejecting key hypotheses about risk drivers in the insurance portfolio. The analysis uses Claim Frequency, Claim Severity, and Margin to quantify risk and inform segmentation strategy.
+Objective: Build and evaluate models to predict insurance claim severity and probability, forming the foundation for a dynamic, risk-based pricing system.
 
-Hypotheses Tested
+Key Steps:
 
-H₀: No risk differences across provinces
+Data Preparation: Handle missing values, encode categorical features, and split data into training and test sets.
 
-H₀: No risk differences between zip codes
+Modeling: Implement Linear Regression, Random Forest, and XGBoost for regression (claim severity) and classification (claim probability).
 
-H₀: No significant margin (profit) difference between zip codes
+Evaluation: Assess models using RMSE, R² for regression, and accuracy, ROC-AUC, precision, recall, F1-score for classification.
 
-H₀: No significant risk difference between Female and Male clients
+Interpretability: Use SHAP to identify the most influential features and understand their impact on predictions.
 
-Methodology
+Outcome: Provides actionable insights for premium optimization and risk-based customer segmentation.
 
-Data Preparation: Cleaned Gender column to include only 'Male' and 'Female'.
+Deliverables:
 
-Group Segmentation: Control (Group A) and Test (Group B) defined per feature.
+Trained predictive models
 
-Statistical Tests:
+Evaluation metrics and comparison
 
-t-tests for numerical KPIs (Claim Severity, Margin)
-
-z-test for proportion (Claim Frequency by Gender)
-
-Significance Level: p-value < 0.05 indicates rejection of H₀
-This task focuses on implementing Data Version Control (DVC) to ensure a reproducible, auditable, and traceable data workflow.
-DVC is essential in regulated industries such as finance and insurance, where every dataset and experiment must be fully reproducible.
-This repository contains an end-to-end analytics workflow for risk segmentation, exploratory analysis, and early-stage predictive modeling for AlphaCare Insurance Solutions (ACIS).
-The project supports the business goal of identifying low-risk customer segments and improving premium optimization using historical insurance claim data from South Africa (2014–2015).
+Feature importance visualizations (SHAP bar & summary plots)
